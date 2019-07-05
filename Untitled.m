@@ -49,20 +49,19 @@ for i = 1:length(laser_frames)+1
 end
 
 %% Movie Code
-Z = peaks;
-surf(Z)
-axis tight manual
-ax = gca;
-ax.NextPlot = 'replaceChildren';
+% 1. Load data: done
+%% 2. Draw/render draw/render scenario at time tk
+a1 = animatedline('Color',[0 .7 .7]);
 
-loops = 40;
-F(loops) = struct('cdata',[],'colormap',[]);
-for j = 1:loops
-    X = data(2,j)*Z;
-    surf(X,Z)
-    drawnow
-    F(j) = getframe(gcf);
+for k=1:100:length(data(2,1:2195848))
+    % extract data at current time
+    t_k = data(2,k);
+    addpoints(a1, timestamps(1,k), double(t_k))
+    drawnow limitrate
 end
+% 3. Take snapshot of scenario
+% 4. Advance time to tk+1
+% 5. Save Movie
 
 %% 
 function frames = set_timestamp(row, data, thresh)
