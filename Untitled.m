@@ -7,11 +7,13 @@ cam2_timeup = timestamps(cam2_frames);
 
 %% Laser code
 laser_frames = intersect(find(data(6,:) <=1.5) +1,find(data(6,:) >1.5));
-
+epoch_start_times = [176197 1137488 2017827 3052049 3848254 5043138 5673241];
+epoch_end_times = laser_frames(diff(laser_frames)>40000);
+epoch_end_times = [epoch_end_times 5853241];
 %% Look at running
-plot(timestamps, y_FB, '-')
+plot(timestamps, smoothdata(data(3,:)), '-')
 hold on
-scatter(timestamps(epoch_starts2), 2*ones(7,1), 'kx')
+scatter(timestamps(epoch_start_times), 2*ones(7,1), 'kx')
 
 %% Remove position noise
 d1 = designfilt('lowpassfir','PassbandFrequency',0.25, ...
