@@ -73,7 +73,7 @@ cam1_indx_pulse(6) = 8264;
 cam2_indx_pulse(6) = 8178;
 subplot(6,4,21);
 im_name_cam1_pulse(6) = "exp3_cam1/" + cam1_dir(cam1_indx_pulse(6)).name;
-im_cam1_pulse(6) = imshow(im_name_cam1_pulse6);
+im_cam1_pulse(6) = imshow(im_name_cam1_pulse(6));
 title('Cam1 pulse 6')
 subplot(6,4,22);
 im_name_cam2_pulse(6) = "exp3_cam2/" + cam2_dir(cam2_indx_pulse(6)).name;
@@ -127,8 +127,8 @@ F(182500) = struct('cdata',[],'colormap',[]);
 tic
 for k=1:400:182501
     %pulse 1 
-    for i=1:6
-          im_name_cam1_pulse(i) = imread("exp3_cam1/" + cam1_dir(cam1_indx_pulse(i)).name);
+%     for i=1:6
+%         im_name_cam1_pulse(i) = imread("exp3_cam1/" + cam1_dir(cam1_indx_pulse(i)).name);
 %         im_name_cam1_pulse(i) = imread("exp3_cam1/" + cam1_dir(cam1_indx_pulse(i)).name);
 %         set(im_cam1_pulse(i),'CData',im_name_cam1_pulse(i));
 %         
@@ -137,7 +137,7 @@ for k=1:400:182501
 %         
 %         cam1_indx_pulse(i) = cam1_indx_pulse(i) + 1;
 %         cam2_indx_pulse(i) = cam2_indx_pulse(i) + 1;
-    end
+%     end
 %     im_name_cam1_pulse1 = imread("exp3_cam1/" + cam1_dir(cam1_indx_pulse1).name);
 %     set(im_cam1_pulse1,'CData',im_name_cam1_pulse1);
 %     im_name_cam2_pulse1 = imread("exp3_cam2/" + cam2_dir(cam2_indx_pulse1).name);
@@ -215,7 +215,3 @@ im_fig = figure;
  end
  % close the writer object
  close(writerObj);
-%%
-function update_im(k)
-    disp('hi');
-end
