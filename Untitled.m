@@ -11,37 +11,15 @@ epoch_start_times = [176197 1137488 2017827 3052049 3848254 5043138 5673241];
 epoch_end_times = laser_frames(diff(laser_frames)>40000);
 epoch_end_times = [epoch_end_times 5853241];
 %% Look at running
-plot(timestamps, smoothdata(data(3,:)), '-')
+plot(timestamps, smoothdata(data(2,:)), '-')
 hold on
 scatter(timestamps(epoch_start_times), 2*ones(7,1), 'kx')
-
-%% Remove position noise
-d1 = designfilt('lowpassfir','PassbandFrequency',0.25, ...
-         'StopbandFrequency',0.35,'PassbandRipple',0.5, ...
-         'StopbandAttenuation',65,'DesignMethod','kaiserwin',...
-         'SampleRate', 100);
-y_LR = filtfilt(d1,double(data(3,:)));
-
-plot(timestamps, y_L)
-
-%% smooth disp noise
-window = 10000;
-coeff = ones(1,window)/window;
-avg_LR = filter(coeff, 1, data(2,:));
-plot(timestamps(1,:), avg_LR(1,:))
 
 %% object pos frames
 object_timeup = set_timestamp(1, data, 1.5)
 
 %% fb frames
 fb_timeup = set_timestamp(2, data, 1.7)
-
-
-%% match epoch timestamps with indices
-% epoch_starts2 = epoch_starts
-% 
-% for i=1:length(timestamps)
-%     if timestamps(i) == 
 
 %% my_difference function
 new_laser_frames = laser_frames
@@ -65,6 +43,31 @@ end
 % 4. Advance time to tk+1
 % 5. Save Movie
 
+%%
+pulse1 = 176197:358697;
+pulse2 = 1137488:1319988;
+pulse3 = 2017827:2200327;
+pulse4 = 3052049:3234549;
+pulse5 = 3848254:4030754;
+pulse6 = 5043138:5225638;
+% pulse7 = 5673241:5853241;
+
+pulses = [pulse1; pulse2; pulse3; pulse4; pulse5; pulse6];
+%%
+cam1_epoch1_frames = 151:456;
+cam1_epoch2_frames = 1754:2058;
+cam1_epoch3_frames = 3221:3525;
+cam1_epoch4_frames = 4945:5250;
+cam1_epoch5_frames = 6273:
+cam1_epoch6_frames = 8264:
+cam1_epoch7_frames = 9314:
+
+cam2_epoch1_frames = 66:370;
+cam2_epoch2_frames = 1668:1972;
+cam2_epoch3_frames = 3135:3439;
+cam2_epoch4_frames = 4860:5164;
+cam2_epoch5_frames = 6187
+cam2_epoch6_frames = 8178
 %% 
 function frames = set_timestamp(row, data, thresh)
     frames = intersect(find(data(row,:)<=thresh)+1, find(data(row,:)>thresh));
