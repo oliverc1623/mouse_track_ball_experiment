@@ -15,8 +15,8 @@ end
 %% get eye cam stimulus 2
 % stim4 = get_movie_chunks(stim_chunks{4}, sorted_filenames, folder_name);
 most_movie = all_chunks{1};
-for i=2:10
-    most_movie = cat(2,most_movie, all_chunks{i});
+for i=1:10
+    most_movie = horcat();
 end
 %% get all the movie start & end frames
 stim_chunks = get_movie_start_end(epoch_start_times, cam1_timeup, timestamps);
