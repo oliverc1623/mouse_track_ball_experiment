@@ -21,3 +21,21 @@
 * 1x IR emitter 
 * 2x ADNS-9800 laser sensor
 
+### Equipment Setup
+For the Arduinoe Dues and ADNS laser sensors, we will use the 3.3v configuration.
+
+#### I/O
+Laser Sensor 1 Pins: Laser Chip to Jumper Wire to Arduino Due
+SS -> blue -> 10  
+MO -> red -> MOSI  
+SC -> green -> SCK  
+MI -> purple -> MISO  
+MOT -> yellow -> 2   
+AG -> black -> GND  
+GND -> grey -> GND  
+VI -> brown -> 3.3V  
+	BNC cable:  
+		Red -> DAC1   
+		Black -> GND  
+  
+Laser Sensor 2 Pins 
