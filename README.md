@@ -25,7 +25,7 @@
 For the Arduinoe Dues and ADNS laser sensors, we will use the 3.3v configuration.
 
 #### I/O
-Laser Sensor 1 Pins: Laser Chip to Jumper Wire to Arduino Due  
+##### Laser Sensor 1 Pins: Laser Chip to Jumper Wire to Arduino Due  
 SS -> blue -> 10  
 MO -> red -> MOSI  
 SC -> green -> SCK  
@@ -38,7 +38,7 @@ VI -> brown -> 3.3V
 		Red -> DAC1   
 		Black -> GND  
   
-Laser Sensor 2 Pins 
+###### Laser Sensor 2 Pins 
 SS -> purple -> 10  
 MO -> orange -> MOSI  
 SC -> yellow -> SCK  
@@ -50,3 +50,9 @@ VI -> red -> 3.3V
 	BNC cable:  
 		Red -> DAC0   
 		Black -> GND  
+
+###### Basler Camera 1 (Eye Camera)
+There are two cables to connect to the Basler cameras: usb and power IO cable.  
+The Power IO cable is what sends the signals from the camera to a BNC cable.   
+Pins for Power IO cable (eye ca):  
+
