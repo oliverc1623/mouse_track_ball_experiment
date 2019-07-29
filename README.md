@@ -14,4 +14,10 @@
 
 ## Getting Started
 ### Hardware Prerequisites
+* 2x Arduino Due
+* 1x Teensy board (if you want servo moving object)
+* 1x Servo Motor (SG-5010)
+* 2x Basler Cameras
+* 1x IR emitter 
+* 2x ADNS-9800 laser sensor
 
