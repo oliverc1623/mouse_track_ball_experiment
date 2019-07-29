@@ -1,9 +1,17 @@
 # Mouse Track Ball Experiment
 
 ## Table of Contents
-1. Setup and Installation
-    1. [equipment]Equipment
-2. Running the Experiment
+* [Getting Started](#getting-started)  
+  * [Hardware Prerequisites](#hardware-prerequisites)  
+  * [Making the scale box](#making-the-scale-box)
+  * [Software Prerequisites](#software-prerequisites)
+* [Load cell to Arduino hookup guide](#load-cell-to-arduino-hookup-guide)
+* [Installation](#installation)
+* [Arduino code](#arduino-code)
+* [Matlab code](#matlab-code)
+  * [System_scale](#system-scale)
+  * [Run scale](#run-scale)
 
-## Equipment
+## Getting Started
+### Hardware Prerequisites
 
