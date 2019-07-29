@@ -25,7 +25,7 @@
 For the Arduinoe Dues and ADNS laser sensors, we will use the 3.3v configuration.
 
 #### I/O
-Laser Sensor 1 Pins: Laser Chip to Jumper Wire to Arduino Due
+Laser Sensor 1 Pins: Laser Chip to Jumper Wire to Arduino Due  
 SS -> blue -> 10  
 MO -> red -> MOSI  
 SC -> green -> SCK  
