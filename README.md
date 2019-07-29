@@ -39,3 +39,14 @@ VI -> brown -> 3.3V
 		Black -> GND  
   
 Laser Sensor 2 Pins 
+SS -> purple -> 10  
+MO -> orange -> MOSI  
+SC -> yellow -> SCK  
+MI -> purple -> MISO  
+MOT -> white -> 2   
+AG -> black -> GND  
+GND -> grey -> GND  
+VI -> red -> 3.3V  
+	BNC cable:  
+		Red -> DAC0   
+		Black -> GND  
